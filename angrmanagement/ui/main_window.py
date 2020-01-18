@@ -349,7 +349,7 @@ class MainWindow(QMainWindow):
     def load_file(self, file_path):
         if os.path.isfile(file_path):
             if file_path.endswith(".adb"):
-                self.load_database(file_path)
+                self._load_database(file_path)
             else:
                 self.workspace.instance.add_job(LoadBinaryJob(file_path))
 
